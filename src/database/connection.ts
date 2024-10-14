@@ -1,11 +1,11 @@
 import  pool  from "pg";
 
 export const connection = new pool.Pool({
-    host: "localhost",
-    user: "postgres",
-    password: "1234",
-    database: "blog",
-    port: 5432
+    host: "localhost", //database host
+    user: "postgres", //database user
+    password: "1234", //database password
+    database: "blog", //database name
+    port: 5432 //database port
 })
 
 connection.connect((err) => {
@@ -15,3 +15,4 @@ connection.connect((err) => {
         console.log("Connection successful");
     }
 })
+
